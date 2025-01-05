@@ -1,9 +1,8 @@
-// Specifies the file upload location
-import multer, { diskStorage } from 'multer';
 import * as path from 'node:path';
 import * as fs from 'node:fs';
+import * as multer from 'multer';
 
-const storage = diskStorage({
+const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, path.join(__dirname, 'uploads'));
   },
@@ -15,7 +14,7 @@ const storage = diskStorage({
   },
 });
 
-export const upload = multer({
+export default multer({
   storage: storage,
   limits: {
     fileSize: 1024 * 1024 * 25,
