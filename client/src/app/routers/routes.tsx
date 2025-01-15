@@ -1,21 +1,29 @@
 // import { URLS } from "@/app/routers/app.urls";
 // import { lazy } from "react";
 import iRoute from "./types";
+
+import { createElement, lazy, Suspense } from "react";
+import { URLS } from "../const.ts";
+
 // import React from "react";
 
-// const Profile = lazy(() => import("@/pages/profile/"));
+const HomePage = lazy(() => import("../../pages/home"));
 //
 
 export const PublicRoutes: iRoute[] = [
-  // {
-  //     route: URLS.LOGIN,
-  //     element: React.createElement(Auth)
-  // }
+  {
+    path: URLS.home,
+    element: (
+      <Suspense fallback={<div>Loading...</div>}>
+        <HomePage />
+      </Suspense>
+    )
+  }
 ];
 
 export const PrivateRoutes: iRoute[] = [
-  // {
-  //     route: URLS.USERS,
-  //     element: React.createElement(UserPage)
-  // },
+  {
+    path: URLS.constructor,
+    element: createElement("div")
+  }
 ];

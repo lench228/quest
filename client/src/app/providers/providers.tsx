@@ -1,10 +1,10 @@
-import { FC } from "react";
+import React, { FC } from "react";
 
 import { Provider } from "react-redux";
 import { store } from "../store";
 
 interface IProvider {
-  children: JSX.Element;
+  children: React.ReactNode;
 }
 
 export const Providers: FC<IProvider> = ({ children }: IProvider) => {
