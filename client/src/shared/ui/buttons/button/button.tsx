@@ -1,6 +1,7 @@
 import React, { ReactNode } from "react";
-import buttonStyles from "./button.module.css";
+
 import libStyles from "../../lib/button.module.css";
+import buttonStyles from "./button.module.css";
 
 import clsx from "clsx";
 
@@ -11,15 +12,13 @@ interface iButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: TVariant;
 }
 
-export const Button = ({
-  children,
-  variant = "primary",
-  ...props
-}: iButton) => {
+export const Button = (props: iButton) => {
+  const { children, variant = "primary", disabled, ...rest } = props;
   return (
     <button
-      {...props}
-      className={clsx(libStyles.button, buttonStyles[variant])}
+      {...rest}
+      disabled={disabled}
+      className={clsx(buttonStyles[variant], libStyles.button)}
     >
       {children}
     </button>

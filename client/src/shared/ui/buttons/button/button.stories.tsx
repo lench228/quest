@@ -51,6 +51,17 @@ export const ButtonSecondary: Story = {
     children: "Кнопка",
     disabled: false,
   },
+  decorators: [
+    (Story: () => React.ReactNode) => (
+      <div
+        className={
+          "bg-additional dark:bg-background w-full h-full flex flex-col items-center"
+        }
+      >
+        <Story />
+      </div>
+    ),
+  ],
 };
 
 export const ButtonSecondaryDisabled: Story = {
@@ -59,6 +70,18 @@ export const ButtonSecondaryDisabled: Story = {
     children: "Кнопка",
     disabled: true,
   },
+
+  decorators: [
+    (Story: () => React.ReactNode) => (
+      <div
+        className={
+          "bg-additional dark:bg-background w-full h-full flex flex-col items-center"
+        }
+      >
+        <Story />
+      </div>
+    ),
+  ],
 };
 
 export const ButtonCancel: Story = {
@@ -73,6 +96,6 @@ export const ButtonCancelDisabled: Story = {
   args: {
     variant: "cancel",
     children: "Кнопка",
-    disabled: false,
+    disabled: true,
   },
 };

@@ -1,3 +1,5 @@
 .navigation {
-    @apply dark:bg-main-dark bg-additional w-full px-5 py-[10px];
+    @apply dark:bg-main-dark bg-additional;
+
+    @apply w-full px-5 py-[10px] min-w-[400px];
 }

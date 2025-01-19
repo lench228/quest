@@ -1,7 +1,7 @@
 .button {
     @apply rounded-xl flex items-center justify-center;
-    @apply text-white font-medium text-lg;
-    @apply px-5 py-[10px];
+    @apply font-medium text-lg;
+    @apply px-5 py-[10px] text-white;
     &:disabled {
         @apply opacity-40 cursor-default;
     }

@@ -11,7 +11,8 @@
 
 
 .secondary {
-    @apply dark:border-additional border-background;
+    @apply  dark:border-additional border-background ;
+
     &:hover {
         @apply bg-dim;
     }
@@ -25,4 +26,5 @@
     &:hover {
         @apply border-additional;
     }
+
 }
