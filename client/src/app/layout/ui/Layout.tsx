@@ -1,25 +1,13 @@
 import { Outlet } from "react-router-dom";
+import Navigation from "../../../widgets/navigation/ui/navigation.tsx";
 
 export const Layout = () => {
   return (
-    <div>
+    <div className={"h-full"}>
       <header>
-        <h1 className={"text-sm"}>My App</h1>
-        <nav>
-          <ul>
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="/about">About</a>
-            </li>
-            <li>
-              <a href="/contact">Contact</a>
-            </li>
-          </ul>
-        </nav>
+        <Navigation></Navigation>
       </header>
-      <main>
+      <main className={"dark:bg-background bg-white h-full"}>
         <Outlet />
       </main>
     </div>

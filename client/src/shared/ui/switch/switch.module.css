@@ -1,0 +1,4 @@
+.switch {
+    @apply flex rounded-xl;
+    @apply bg-background w-fit p-[2px];
+}

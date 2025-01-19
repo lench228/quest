@@ -4,13 +4,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "2b2b33",
-        main: "1919d3",
-        "main-dark": "46469b",
-        additional: "3939C5",
-        dim: "464670",
-        grey: "373746",
-        white: "f2f2f2"
+        background: "#2b2b33",
+        main: "#1919d3",
+        "main-dark": "#46469b",
+        additional: "#3939C5",
+        dim: "#464670",
+        grey: "#373746",
+        white: "#f2f2f2",
+        error: "#E52E2E",
       },
       fontFamily: {
         regular: [
@@ -21,7 +22,7 @@ export default {
           "Roboto",
           "Helvetica Neue",
           "Arial",
-          "sans-serif"
+          "sans-serif",
         ],
         bold: [
           "Rubik-Bold",
@@ -31,7 +32,7 @@ export default {
           "Roboto",
           "Helvetica Neue",
           "Arial",
-          "sans-serif"
+          "sans-serif",
         ],
         extraBold: [
           "Rubik-ExtraBold",
@@ -41,7 +42,7 @@ export default {
           "Roboto",
           "Helvetica Neue",
           "Arial",
-          "sans-serif"
+          "sans-serif",
         ],
         light: [
           "Rubik-Light",
@@ -51,11 +52,11 @@ export default {
           "Roboto",
           "Helvetica Neue",
           "Arial",
-          "sans-serif"
-        ]
-      }
-    }
+          "sans-serif",
+        ],
+      },
+    },
   },
   plugins: [],
-  darkMode: "media"
+  darkMode: "selector",
 };

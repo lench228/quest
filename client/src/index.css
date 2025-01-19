@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-
 @font-face {
     font-family: "Rubik-Bold";
     font-style: normal;

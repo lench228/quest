@@ -1,0 +1,10 @@
+.button {
+    @apply rounded-xl flex items-center justify-center;
+    @apply text-white font-medium text-lg;
+    @apply px-5 py-[10px];
+    &:disabled {
+        @apply opacity-40;
+    }
+    @apply border-background border-2;
+
+}

@@ -1,0 +1,14 @@
+
+.radio{
+    @apply cursor-pointer;
+    @apply bg-background border-background text-opacity-60;
+
+    &:hover {
+        @apply border-additional;
+    }
+}
+
+.buttonRadio input:checked + .radio {
+    @apply bg-dim border-dim dark:bg-additional  dark:border-additional text-opacity-100;
+}
+
