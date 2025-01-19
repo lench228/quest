@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    position: relative;
+
+}
+
+.label {
+    @apply text-white dark:text-additional font-regular text-sm w-fit;
+    @apply transition-colors;
+}
+
+.input {
+    @apply text-background dark:text-additional dark:border-dim dark:bg-background font-medium text-lg border-2 ;
+
+    padding: 4px;
+    border-radius: 4px;
+
+    transition: border-color 0.3s ease;
+
+    &:focus {
+        @apply border-background dark:border-white outline-none;
+
+    }
+}
+
+.container[data-error="true"] .input {
+    @apply border-error
+}
+.container[data-error="true"] .label {
+    @apply text-error
+}

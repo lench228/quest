@@ -24,6 +24,16 @@ export default {
           "Arial",
           "sans-serif",
         ],
+        medium: [
+          "Rubik-Medium",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Roboto",
+          "Helvetica Neue",
+          "Arial",
+          "sans-serif",
+        ],
         bold: [
           "Rubik-Bold",
           "-apple-system",

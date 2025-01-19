@@ -3,7 +3,7 @@ import Navigation from "../../../widgets/navigation/ui/navigation.tsx";
 
 export const Layout = () => {
   return (
-    <div className={"h-full"}>
+    <div className={"h-screen"}>
       <header>
         <Navigation></Navigation>
       </header>

@@ -14,5 +14,5 @@ const container = createRoot(root);
 container.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
 );
