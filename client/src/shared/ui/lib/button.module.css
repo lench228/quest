@@ -3,7 +3,7 @@
     @apply text-white font-medium text-lg;
     @apply px-5 py-[10px];
     &:disabled {
-        @apply opacity-40;
+        @apply opacity-40 cursor-default;
     }
     @apply border-background border-2;
 

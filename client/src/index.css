@@ -41,3 +41,8 @@
 }
 
 
+html.dark-mode-storybook {
+    background-color: #333 !important;
+    color: white !important;
+}
+

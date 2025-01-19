@@ -16,7 +16,7 @@
         @apply bg-dim;
     }
     &:active{
-        @apply bg-background     dark:bg-additional;
+        @apply bg-background dark:bg-additional;
     }
 }
 
