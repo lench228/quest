@@ -4,12 +4,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "#2b2b33",
+        background: "#373746",
+        "background-main": "#2b2b33",
         main: "#1919d3",
         "main-dark": "#46469b",
         additional: "#3939C5",
         dim: "#464670",
-        grey: "#373746",
         white: "#f2f2f2",
         error: "#E52E2E",
       },
@@ -67,6 +67,7 @@ export default {
       },
     },
   },
+
   plugins: [],
-  darkMode: "selector",
+  darkMode: "class",
 };

@@ -20,12 +20,4 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Home: Story = {
-  decorators: [
-    (Story: () => React.ReactNode) => (
-      <div className={" w-[430px] h-[500px] flex flex-col items-center"}>
-        <Story />
-      </div>
-    ),
-  ],
-};
+export const Home: Story = {};

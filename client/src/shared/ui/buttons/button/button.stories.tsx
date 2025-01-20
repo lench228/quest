@@ -8,13 +8,7 @@ const meta = {
   component: Button,
   parameters: {
     layout: "centered",
-    backgrounds: {
-      values: [
-        { name: "Dark", value: "#F2f2f2" },
-        { name: "Light", value: "#3939C5" },
-      ],
-      default: "Dark",
-    },
+
     argTypes: {
       disabled: { control: "disabled" },
     },
@@ -51,17 +45,6 @@ export const ButtonSecondary: Story = {
     children: "Кнопка",
     disabled: false,
   },
-  decorators: [
-    (Story: () => React.ReactNode) => (
-      <div
-        className={
-          "bg-additional dark:bg-background w-full h-full flex flex-col items-center"
-        }
-      >
-        <Story />
-      </div>
-    ),
-  ],
 };
 
 export const ButtonSecondaryDisabled: Story = {
@@ -70,18 +53,6 @@ export const ButtonSecondaryDisabled: Story = {
     children: "Кнопка",
     disabled: true,
   },
-
-  decorators: [
-    (Story: () => React.ReactNode) => (
-      <div
-        className={
-          "bg-additional dark:bg-background w-full h-full flex flex-col items-center"
-        }
-      >
-        <Story />
-      </div>
-    ),
-  ],
 };
 
 export const ButtonCancel: Story = {

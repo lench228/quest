@@ -1,7 +1,7 @@
 import type { Preview } from "@storybook/react";
 // .storybook/preview.ts
 import { ModeDecorator } from "./modeDecorator";
-import "../src/index.css";
+import "../src/styles/output.css";
 export const decorators = [ModeDecorator];
 
 const preview: Preview = {
@@ -11,6 +11,11 @@ const preview: Preview = {
         color: /(background|color)$/i,
         date: /Date$/i,
       },
+    },
+    darkMode: {
+      stylePreview: true,
+      darkClass: "dark",
+      lightClass: "",
     },
   },
 };
