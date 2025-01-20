@@ -1,0 +1,30 @@
+.primary {
+    @apply dark:bg-additional dark:border-additional bg-background border-background;
+    &:hover {
+        @apply bg-dim border-dim;
+    }
+
+    &:active{
+        @apply dark:border-additional  border-background;
+    }
+}
+
+
+.secondary {
+    @apply  dark:border-additional border-background ;
+
+    &:hover {
+        @apply bg-dim;
+    }
+    &:active{
+        @apply bg-background dark:bg-additional;
+    }
+}
+
+.cancel {
+    @apply bg-error border-error;
+    &:hover {
+        @apply border-additional;
+    }
+
+}

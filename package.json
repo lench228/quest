@@ -1,0 +1,39 @@
+{
+  "dependencies": {
+    "@prisma/client": "^6.1.0",
+    "concurrently": "^9.1.2"
+  },
+  "name": "quest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"npm run client\" \"npm run server\"",
+    "client": "npm --prefix client run dev",
+    "server": "npm --prefix server run start:dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lench228/quest.git#master"
+  },
+  "keywords": [
+    "quest",
+    "game",
+    "fun",
+    "gifts"
+  ],
+  "author": "lench",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lench228/quest/issues"
+  },
+  "homepage": "https://github.com/lench228/quest/tree/master#readme",
+  "description": "",
+  "devDependencies": {
+    "@types/multer": "^1.4.12",
+    "@types/node": "^22.10.5",
+    "prisma": "^6.1.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

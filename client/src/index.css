@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+@font-face {
+    font-family: "Rubik-Bold";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(./assets/Rubik/Rubik-Bold.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Rubik-ExtraBold";
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url(./assets/Rubik/Rubik-ExtraBold.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Rubik-Light";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(./assets/Rubik/Rubik-Light.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(./assets/Rubik/Rubik-Regular.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Rubik-Medium";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(./assets/Rubik/Rubik-Medium.ttf) format("truetype");
+}
+}
+
+body{
+    @apply h-screen;
+}
+
+root{
+    @apply h-screen;
+}
+
