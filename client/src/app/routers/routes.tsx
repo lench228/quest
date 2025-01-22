@@ -5,6 +5,7 @@ import iRoute from "./types";
 import { createElement, lazy, Suspense } from "react";
 import { URLS } from "../const.ts";
 import Preloader from "../../shared/ui/loading/ui/preloader.tsx";
+import Constructor from "../../widgets/constructor";
 
 // import React from "react";
 
@@ -17,6 +18,14 @@ export const PublicRoutes: iRoute[] = [
     element: (
       <Suspense fallback={<Preloader />}>
         <HomePage />
+      </Suspense>
+    ),
+  },
+  {
+    path: URLS.constructor,
+    element: (
+      <Suspense fallback={<Preloader />}>
+        <Constructor />
       </Suspense>
     ),
   },

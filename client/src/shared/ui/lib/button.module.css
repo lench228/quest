@@ -6,5 +6,11 @@
         @apply opacity-40 cursor-default;
     }
     @apply border-background border-2;
-
 }
+
+.sm{
+    @apply w-[140px] h-[40px];
+}
+.md {}
+.lg {}
+.xl{}

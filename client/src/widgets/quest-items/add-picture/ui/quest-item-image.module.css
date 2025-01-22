@@ -1,0 +1,12 @@
+.image{
+    @apply   m-auto
+}
+
+.container{
+    @apply bg-main dark:bg-dim m-auto flex flex-col items-center justify-center rounded-xl w-[350px] h-[400px] p-10 ;
+}
+
+.title{
+    @apply font-bold text-2xl text-white text-center mb-2;
+    @apply dark:text-main;
+}

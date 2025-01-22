@@ -1,7 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
+import QuestItemsSlice from "../../widgets/quest-items/model/quest-items.slice.ts";
 
 export const store = configureStore({
-  reducer: {}
+  reducer: {
+    [QuestItemsSlice.name]: QuestItemsSlice.reducer,
+  },
 });
 
 export type RootState = ReturnType<typeof store.getState>;

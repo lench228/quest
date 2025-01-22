@@ -1,5 +1,4 @@
 .navigation {
-    @apply dark:bg-background bg-main-dark px-5 py-[10px] w-full;
-
+    @apply dark:bg-grey bg-main-dark px-5 py-[10px] w-full fixed;
 }
 

@@ -1,4 +1,4 @@
 .home{
-    @apply h-full flex flex-col justify-center items-center;
+    @apply h-full flex flex-col justify-center items-center dark:bg-background;
     @apply m-auto;
 }

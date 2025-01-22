@@ -7,7 +7,7 @@ export const Layout = () => {
       <header>
         <Navigation></Navigation>
       </header>
-      <main className={"dark:bg-background bg-white h-full"}>
+      <main className={"dark:bg-background bg-white"}>
         <Outlet />
       </main>
     </div>

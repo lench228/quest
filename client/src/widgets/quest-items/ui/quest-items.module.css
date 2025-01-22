@@ -1,0 +1,3 @@
+.container{
+    @apply gap-2 h-fit flex w-full flex-col items-center justify-center pt-10 overflow-y-scroll;
+}
