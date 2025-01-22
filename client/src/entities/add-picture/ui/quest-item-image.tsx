@@ -1,8 +1,8 @@
-import Upload from "../../../../assets/icons/upload.tsx";
+import Upload from "../../../assets/icons/upload.tsx";
 import { ChangeEvent, useRef, useState } from "react";
-
 import styles from "./quest-item-image.module.css";
 import clsx from "clsx";
+import PaginatorSlides from "../../../shared/ui/paginator-slides";
 
 interface iQuestItemImage {
   imageUrl: string;
@@ -12,7 +12,6 @@ interface iQuestItemImage {
 
 export const QuestItemImage = ({ imageUrl, order, total }: iQuestItemImage) => {
   const [previewUrl, setPreviewUrl] = useState<string | null>(imageUrl);
-
   const inputRef = useRef<HTMLInputElement>(null);
 
   const handleInputClick = (e: ChangeEvent<HTMLInputElement>) => {
@@ -29,13 +28,17 @@ export const QuestItemImage = ({ imageUrl, order, total }: iQuestItemImage) => {
 
   return (
     <li
-      className={clsx(styles.container)}
+      className={clsx(
+        styles.container,
+        previewUrl?.length && styles.image_container,
+      )}
       onClick={() => {
         if (inputRef.current) {
           inputRef.current.click();
         }
       }}
     >
+      <PaginatorSlides order={order} total={total} />
       <input
         type="file"
         id="pic"
@@ -45,25 +48,27 @@ export const QuestItemImage = ({ imageUrl, order, total }: iQuestItemImage) => {
         hidden={true}
         ref={inputRef}
       />
+
       {previewUrl ? (
         <img
-          className={styles.image}
+          className={clsx(styles.image)}
           src={previewUrl}
           alt={"Ваше изображение"}
         />
       ) : (
-        <>
-          {" "}
-          <h1 className={styles.title}>
+        <div className="items-center self-center flex flex-col mt-auto justify-center h-full">
+          <h1
+            className={clsx(
+              styles.title,
+              "text-center text-sm  dark:text-additional",
+            )}
+          >
             Загрузить
             <br /> изображение
           </h1>
           <Upload />
-        </>
+        </div>
       )}
-      <p className={"absolute right-0 p-1 font-medium dark:text-additional"}>
-        {order}/{total}
-      </p>
     </li>
   );
 };

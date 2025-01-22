@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { addItem, selectItems } from "../model/quest-items.slice.ts";
-import QuestItemImage from "../add-picture";
+import QuestItemImage from "../../add-picture";
 import { Suspense } from "react";
 import Preloader from "../../../shared/ui/loading/ui/preloader.tsx";
 import styles from "./quest-items.module.css";
@@ -16,13 +16,20 @@ const QuestItems = () => {
 
   return (
     <Suspense fallback={<Preloader />}>
-      <div className={"flex flex-col items-center gap-4 "}>
+      <div
+        className={
+          "flex flex-col items-center gap-4  max-h-[calc(100vh - 80px)]"
+        }
+      >
         {items ? (
           //@todo DragNDrop
-          <ul className={styles.container}>
+          <ul
+            className={`${styles.container} max-h-[calc(100vh - 150px)] overflow-y-auto`}
+          >
             {" "}
             {items.map((item, index) => (
               <QuestItemImage
+                key={index}
                 imageUrl={item.imageUrl}
                 order={index + 1}
                 total={items.length}

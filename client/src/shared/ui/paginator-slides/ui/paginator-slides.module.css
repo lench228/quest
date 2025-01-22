@@ -1,0 +1,6 @@
+.paginator{
+    @apply bg-gray-100 dark:bg-grey px-2 py-1 rounded-md;
+    @apply font-medium text-sm;
+    @apply absolute top-2 left-2;
+    @apply  dark:text-white;
+}

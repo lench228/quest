@@ -1,15 +1,11 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { TQuestItem } from "../types/types.ts";
 
-type TQuestItem = {
-  type: string;
-  imageUrl: string;
-};
-
-interface iQuestItems {
+export interface iQuestItemsSlice {
   items: TQuestItem[];
 }
 
-const initialState: iQuestItems = {
+export const initialState: iQuestItemsSlice = {
   items: [
     {
       type: "image",
@@ -33,5 +29,6 @@ const QuestItemsSlice = createSlice({
 
 export const { addItem } = QuestItemsSlice.actions;
 export const { selectItems } = QuestItemsSlice.selectors;
+export type QuestItemState = typeof initialState;
 
 export default QuestItemsSlice;
