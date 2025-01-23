@@ -1,4 +1,4 @@
-import { QuestItems } from "../../quest-items/ui/quest-items.tsx";
+import QuestItems from "../../../entities/quest-items";
 
 export const Constructor = () => {
   return (

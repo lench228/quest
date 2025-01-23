@@ -2,12 +2,12 @@ import React, { ChangeEvent } from "react";
 import { UseLocalStorage } from "../../hooks/useLocalStorage.tsx";
 import styles from "./input.module.css";
 import Input from "./input.tsx";
-
-type TInputVariant = "text" | "color";
+import { TInputVariant } from "../../types/types.ts";
+import InputLabel from "../input-label/ui/input-label.tsx";
 
 interface iInputWrapper extends React.InputHTMLAttributes<HTMLInputElement> {
   label: string;
-  validate: (value: string) => string;
+  validate?: (value: string) => string;
   id: string;
   variant: TInputVariant;
 }
@@ -21,11 +21,14 @@ const InputWrapper = (props: iInputWrapper) => {
   const handleInput = (e: ChangeEvent<HTMLInputElement>) => {
     const eventValue = e.target.value;
     setValue(eventValue);
-    const error = validate(eventValue);
 
-    if (error) {
-      setError(error);
-    } else setError("");
+    if (validate) {
+      const error = validate(eventValue);
+
+      if (error) {
+        setError(error);
+      } else setError("");
+    }
   };
 
   return (
@@ -33,7 +36,7 @@ const InputWrapper = (props: iInputWrapper) => {
       className={styles.container}
       data-error={error ? "true" : "false"}
     >
-      <label className={styles.label}>{error ? error : label}</label>
+      <InputLabel label={label} error={error} />
       <div className={"flex items-center"}>
         {variant === "color" && (
           <input

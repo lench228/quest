@@ -8,7 +8,7 @@
     }
 }
 
-.buttonRadio input:checked + .radio {
+.container input:checked + .radio {
     @apply bg-dim border-dim dark:bg-additional  dark:border-additional opacity-100;
 }
 

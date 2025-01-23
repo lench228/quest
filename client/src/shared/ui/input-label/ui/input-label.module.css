@@ -1,0 +1,4 @@
+.label {
+    @apply text-white dark:text-additional font-regular text-sm w-fit;
+    @apply transition-colors;
+}

@@ -32,7 +32,7 @@ export const Default = {
   ],
 };
 
-export const WithPinnedTasks = {
+export const fiveStories = {
   decorators: [
     (story: () => ReactNode) => {
       const initialValue: iQuestItemsSlice = {

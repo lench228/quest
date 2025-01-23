@@ -1,0 +1,25 @@
+.wrapper{
+    @apply overflow-x-scroll max-w-[400px]
+}
+
+.backgroundList {
+    @apply flex gap-2 overflow-x-scroll;
+}
+
+.backgroundRadio {
+    @apply cursor-pointer;
+    @apply border-background opacity-60  min-w-[100px] min-h-[140px] h-full w-full ;
+
+    &:hover {
+        @apply border-additional;
+    }
+}
+
+.container {
+    @apply h-full w-full flex;
+}
+
+.container input:checked + .backgroundRadio {
+    @apply border-2 border-error;
+}
+

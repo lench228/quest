@@ -6,10 +6,7 @@
 
 }
 
-.label {
-    @apply text-white dark:text-additional font-regular text-sm w-fit;
-    @apply transition-colors;
-}
+
 
 .input {
     @apply text-background dark:text-additional dark:border-dim dark:bg-background font-medium text-lg border-2 ;
@@ -28,6 +25,6 @@
 .container[data-error="true"] .input {
     @apply border-error
 }
-.container[data-error="true"] .label {
+.container[data-error="true"] label {
     @apply text-error
 }
