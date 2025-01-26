@@ -56,7 +56,7 @@ export const QuestItemImage = ({ imageUrl, order, total }: iQuestItemImage) => {
           alt={"Ваше изображение"}
         />
       ) : (
-        <div className="items-center self-center flex flex-col mt-auto justify-center h-full">
+        <div className="items-center self-center flex flex-col  justify-center h-full">
           <h1
             className={clsx(
               styles.title,

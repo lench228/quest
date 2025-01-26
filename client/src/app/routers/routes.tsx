@@ -5,7 +5,7 @@ import iRoute from "./types";
 import { createElement, lazy, Suspense } from "react";
 import { URLS } from "../const.ts";
 import Preloader from "../../shared/ui/loading/ui/preloader.tsx";
-import Constructor from "../../widgets/constructor";
+import Constructor from "../../pages/constructor";
 
 // import React from "react";
 

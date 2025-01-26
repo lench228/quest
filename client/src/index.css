@@ -41,7 +41,7 @@
 }
 
 body{
-    @apply h-screen;
+    @apply h-screen overflow-y-hidden;
 }
 
 root{

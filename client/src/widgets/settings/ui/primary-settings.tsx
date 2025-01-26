@@ -4,7 +4,7 @@ import BackgroundPick from "../../background-pick/ui/background-pick.tsx";
 
 const PrimarySettings = () => {
   return (
-    <div>
+    <div className={"flex-col items-center w-full justify-center"}>
       <InputWrapper
         id={PRIMARY_SETTINGS_OPTIONS.inputs[0].id}
         label={PRIMARY_SETTINGS_OPTIONS.inputs[0].label}

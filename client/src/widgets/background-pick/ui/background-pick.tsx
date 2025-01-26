@@ -4,6 +4,7 @@ import styles from "./background-pick.module.css";
 import clsx from "clsx";
 
 const BackgroundPick = () => {
+  const bodyRef = document.querySelector("main");
   return (
     <div className={styles.wrapper}>
       <InputLabel label={BACKGROUND_PICK.LABEL} error={""} />
@@ -11,6 +12,7 @@ const BackgroundPick = () => {
         {BACKGROUND_PICK.BACKGROUND_COLORS.map((color) => (
           <li key={color.name} className={styles.container}>
             <input
+              onChange={(e) => {}}
               type={"radio"}
               id={color.name}
               value={color.value}
