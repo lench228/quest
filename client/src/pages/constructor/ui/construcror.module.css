@@ -1,0 +1,5 @@
+.container{
+    @apply bg-white dark:bg-background;
+    @apply flex flex-col;
+    @apply py-12 pt-0 h-screen;
+}

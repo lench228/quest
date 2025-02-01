@@ -3,6 +3,7 @@ import { TQuestItem } from "../types/types.ts";
 
 export interface iQuestItemsSlice {
   items: TQuestItem[];
+  isSliderOpen: boolean;
 }
 
 export const initialState: iQuestItemsSlice = {
@@ -12,6 +13,7 @@ export const initialState: iQuestItemsSlice = {
       imageUrl: "",
     },
   ],
+  isSliderOpen: true,
 };
 
 const QuestItemsSlice = createSlice({
@@ -19,16 +21,20 @@ const QuestItemsSlice = createSlice({
   initialState,
   selectors: {
     selectItems: (store) => store.items,
+    selectIsSliderOpen: (store) => store.isSliderOpen,
   },
   reducers: {
     addItem: (state, action: PayloadAction<string>) => {
       state.items.push({ type: "image", imageUrl: action.payload });
     },
+    toggleSlider: (state, action: PayloadAction<boolean>) => {
+      state.isSliderOpen = action.payload;
+    },
   },
 });
 
-export const { addItem } = QuestItemsSlice.actions;
-export const { selectItems } = QuestItemsSlice.selectors;
+export const { addItem, toggleSlider } = QuestItemsSlice.actions;
+export const { selectItems, selectIsSliderOpen } = QuestItemsSlice.selectors;
 export type QuestItemState = typeof initialState;
 
 export default QuestItemsSlice;

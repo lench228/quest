@@ -11,15 +11,9 @@ export const HomePage = () => {
   };
 
   return (
-    <section className={clsx(styles.home)}>
+    <section className={clsx(styles.container)}>
       <Button onClick={onButtonClick}>Создать квест</Button>
-      <p
-        className={
-          "font-extraBold text-2xl dark:text-additional text-background mt-10"
-        }
-      >
-        Создайте уникальный квест
-      </p>
+      <p className={styles.text}>Создайте уникальный квест</p>
     </section>
   );
 };

@@ -9,7 +9,7 @@
 }
 
 .sm{
-    @apply w-[140px] h-[40px];
+    @apply w-[140px] ;
 }
 .md {}
 .lg {}

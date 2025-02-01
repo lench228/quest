@@ -1,6 +1,8 @@
 import styles from "./settings.module.css";
 import { ReactNode, useEffect, useState } from "react";
 import { useDrag } from "react-dnd";
+import { useDispatch } from "react-redux";
+import { toggleSlider } from "../../../entities/quest-items/model/quest-items.slice.ts";
 
 interface iSettingsWrapperProps {
   children: ReactNode;
@@ -8,9 +10,10 @@ interface iSettingsWrapperProps {
 
 export const SettingsWrapper = (props: iSettingsWrapperProps) => {
   const { children } = props;
+  const dispatch = useDispatch();
 
-  const panelHeight = 240;
-  const visiblePart = 30;
+  const PANEL_HEIGHT = 260;
+  const VISIBLE_PART = 30;
   const [isExpanded, setIsExpanded] = useState(true);
 
   const [, drag] = useDrag(() => ({
@@ -19,8 +22,9 @@ export const SettingsWrapper = (props: iSettingsWrapperProps) => {
     end: (_, monitor) => {
       const offset = monitor.getClientOffset();
       if (offset !== null) {
-        const swipeUp = window.innerHeight - panelHeight - offset.y > 0;
+        const swipeUp = window.innerHeight - PANEL_HEIGHT - offset.y > 0;
         setIsExpanded(swipeUp);
+        dispatch(toggleSlider(swipeUp));
       }
     },
   }));
@@ -31,7 +35,7 @@ export const SettingsWrapper = (props: iSettingsWrapperProps) => {
       className={styles.container}
       ref={drag}
       style={{
-        transform: `translateY(${isExpanded ? 0 : panelHeight - visiblePart}px)`,
+        transform: `translateY(${isExpanded ? 0 : PANEL_HEIGHT - VISIBLE_PART}px)`,
         transition: "transform 0.3s ease",
         position: "fixed",
         left: 0,

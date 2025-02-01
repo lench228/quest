@@ -1,3 +1,10 @@
 .container {
-    @apply gap-2 flex w-full flex-col items-center justify-center pt-10;
+    @apply flex flex-col items-center  gap-2 ;
+    @apply mt-2 h-full;
+}
+
+.items {
+    @apply list-none   overflow-y-auto ;
+    @apply  w-full p-0 m-0;
+    @apply flex flex-col  gap-4 items-center;
 }

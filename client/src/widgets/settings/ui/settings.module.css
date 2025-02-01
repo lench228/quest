@@ -6,3 +6,5 @@
 .dragging {
     @apply opacity-0 ;
 }
+
+.primary { @apply flex-col items-center w-full justify-center;}
