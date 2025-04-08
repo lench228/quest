@@ -1,9 +1,9 @@
-import ThemeChange from "../../../assets/icons/theme-change.tsx";
-import styles from "./navigation.module.css";
+import {ThemeChange} from "../../../../public/icons/theme-change";
+
 
 const Navigation = () => {
   return (
-    <nav className={styles.navigation}>
+    <nav className={"dark:bg-grey bg-main-dark px-5 py-[10px] w-full"}>
       <ThemeChange></ThemeChange>
     </nav>
   );

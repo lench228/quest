@@ -1,10 +1,6 @@
-.container {
-    @apply flex flex-col items-center transition-transform duration-300  self-center py-4 px-2;
-    @apply dark:bg-grey bg-additional
-}
+
 
 .dragging {
     @apply opacity-0 ;
 }
 
-.primary { @apply flex-col items-center ;}

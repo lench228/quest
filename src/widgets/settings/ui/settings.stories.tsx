@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { SettingsWrapper } from "./settings-wrapper.tsx";
-import PrimarySettings from "./primary-settings.tsx";
+import { SettingsWrapper } from "./settings-wrapper";
+import {PrimarySettings} from "./primary-settings";
 import { ReactNode } from "react";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";

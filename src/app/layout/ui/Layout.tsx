@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import Navigation from "../../../widgets/navigation/ui/navigation.tsx";
+import Navigation from "widgets/navigation/ui/navigation";
 
 export const Layout = () => {
   return (

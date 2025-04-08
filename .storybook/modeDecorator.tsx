@@ -1,4 +1,4 @@
-import React from "react";
+
 import Navigation from "../src/widgets/navigation/ui/navigation";
 
 export const ModeDecorator = (Story: any) => {

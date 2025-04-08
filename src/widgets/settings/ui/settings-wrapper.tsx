@@ -1,8 +1,8 @@
-import styles from "./settings.module.css";
+
 import { ReactNode, useEffect, useState } from "react";
 import { useDrag } from "react-dnd";
 import { useDispatch } from "react-redux";
-import { toggleSlider } from "entities/quest-items/model/quest-items.slice";
+import {toggleSlider} from "../../../entities/quest-items/model/quest-items.slice";
 
 interface iSettingsWrapperProps {
   children: ReactNode;
@@ -32,7 +32,7 @@ export const SettingsWrapper = (props: iSettingsWrapperProps) => {
   useEffect(() => {}, [isExpanded, setIsExpanded]);
   return (
     <div
-      className={styles.container}
+      className={"flex flex-col items-center transition-transform duration-300  self-center py-4 px-2 dark:bg-grey bg-additional"}
       ref={drag}
       style={{
         transform: `translateY(${isExpanded ? 0 : PANEL_HEIGHT - VISIBLE_PART}px)`,

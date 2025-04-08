@@ -3,16 +3,16 @@ import {
   addItem,
   selectIsSliderOpen,
   selectItems,
-} from "../model/quest-items.slice.ts";
-import QuestItemImage from "../../add-picture";
+} from "../model";
+
 import { useRef, useEffect, useState } from "react";
 
-import { Button } from "../../../shared/ui/buttons/button/button.tsx";
-import clsx from "clsx";
 
-import styles from "./quest-items.module.css";
+import {INITIAL_MARGIN, PANNEL_HEIGHT} from "../const/";
+import {QuestItem} from "../../add-picture";
+import {Button} from "shared/ui/buttons/button";
 
-import { INITIAL_MARGIN, PANNEL_HEIGHT } from "../const/const.ts";
+
 
 const QuestItems = () => {
   const items = useSelector(selectItems);
@@ -37,15 +37,15 @@ const QuestItems = () => {
 
   return (
     <div
-      className={styles.container}
+      className={"flex flex-col items-center  gap-2 mt-2 h-full"}
       ref={containerRef}
       style={{ height: containerHeight }}
     >
       {items ? (
         //@todo DragNDrop, доскролл при добавлении элемента
-        <ul className={clsx(styles.items)}>
+        <ul className={"list-none overflow-y-auto w-full p-0 m-0 flex flex-col  gap-4 items-center"}>
           {items.map((item, index) => (
-            <QuestItemImage
+            <QuestItem
               key={index}
               imageUrl={item.imageUrl}
               order={index + 1}
@@ -54,7 +54,7 @@ const QuestItems = () => {
           ))}
         </ul>
       ) : (
-        <QuestItemImage imageUrl={""} order={1} total={1} />
+        <QuestItem imageUrl={""} order={1} total={1} />
       )}
 
       <Button onClick={onAddButtonClick}>+</Button>

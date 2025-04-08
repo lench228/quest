@@ -1,4 +1,4 @@
-const ThemeChange = () => {
+export const ThemeChange = () => {
   const toggleTheme = () => {
     document.documentElement.classList.toggle("dark");
   };
@@ -33,4 +33,3 @@ const ThemeChange = () => {
   );
 };
 
-export default ThemeChange;

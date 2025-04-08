@@ -1,35 +1,47 @@
-import React, { ReactNode } from "react";
-
-import libStyles from "../../lib/button.module.css";
-import buttonStyles from "./button.module.css";
-
+import React from "react";
 import clsx from "clsx";
 
-type TVariant = "primary" | "secondary" | "cancel" | "plus";
+type ButtonVariant = "primary" | "secondary" | "error";
+type ButtonSize = "sm" | "md" | "lg";
 
-type TSize = "sm" | "md" | "lg" | "xl";
-
-interface iButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  children: ReactNode;
-  variant?: TVariant;
-  size?: TSize;
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: ButtonVariant;
+  size?: ButtonSize;
+  children: React.ReactNode;
 }
 
-export const Button = (props: iButton) => {
-  const {
-    children,
-    variant = "primary",
-    disabled,
-    size = "sm",
-    ...rest
-  } = props;
+export const Button = ({
+                         variant = "primary",
+                         size = "md",
+                         children,
+                         className,
+                         ...props
+                       }: ButtonProps) => {
+  const baseStyles = "rounded font-medium transition-colors focus:outline-none";
+
+  const variantStyles = {
+    primary: "bg-primary text-white hover:bg-primaryHover active:bg-blue-700",
+    secondary: "bg-secondary text-gray-900 dark:text-white hover:bg-secondaryHover active:bg-gray-400 dark:active:bg-gray-500 border border-gray-300 dark:border-gray-600",
+    error: "bg-error text-white hover:bg-errorHover active:bg-red-700",
+  };
+
+  const sizeStyles = {
+    sm: "px-3 py-1 text-sm",
+    md: "px-4 py-2 text-base",
+    lg: "px-6 py-3 text-lg",
+  };
+
   return (
-    <button
-      {...rest}
-      disabled={disabled}
-      className={clsx(buttonStyles[variant], libStyles.button, libStyles[size])}
-    >
-      {children}
-    </button>
+      <button
+          className={clsx(
+              baseStyles,
+              variantStyles[variant],
+              sizeStyles[size],
+              className
+          )}
+          {...props}
+      >
+        {children}
+      </button>
   );
 };

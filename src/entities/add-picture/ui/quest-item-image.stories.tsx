@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { QuestItemImage } from "./quest-item-image.tsx";
+import { QuestItem } from "./quest-item";
 
 const meta = {
-  title: "Entities/QuestItemImage",
-  component: QuestItemImage,
+  title: "Entities/QuestItem",
+  component: QuestItem,
   parameters: {
     layout: "centered",
 
@@ -13,7 +13,7 @@ const meta = {
     },
   },
   tags: ["autodocs"],
-} satisfies Meta<typeof QuestItemImage>;
+} satisfies Meta<typeof QuestItem>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

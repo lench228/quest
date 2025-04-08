@@ -1,0 +1,1 @@
+export {PrimarySettings} from './primary-settings'

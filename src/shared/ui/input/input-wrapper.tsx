@@ -1,8 +1,8 @@
 import React, { ChangeEvent } from "react";
 import { UseLocalStorage } from "../../hooks/useLocalStorage";
-import styles from "./input.module.css";
+
 import Input from "./input";
-import { TInputVariant } from "../../types/types";
+import { TInputVariant } from "shared/types";
 import InputLabel from "../input-label/ui/input-label";
 
 interface iInputWrapper extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -33,7 +33,7 @@ const InputWrapper = (props: iInputWrapper) => {
 
   return (
     <fieldset
-      className={styles.container}
+      className={"flex flex-col mb-[10px] relative"}
       data-error={error ? "true" : "false"}
     >
       <InputLabel label={label} error={error} />

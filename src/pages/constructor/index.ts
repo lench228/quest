@@ -1,1 +1,1 @@
-export { Constructor as default } from "./ui/constructor.tsx";
+export { Constructor as default } from "./ui/constructor";

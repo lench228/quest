@@ -1,6 +1,51 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-background: #2b2b33;
+  --color-grey: #373746;
+  --color-main: #1919d3;
+  --color-main-dark: #46469b;
+  --color-additional: #3939c5;
+  --color-dim: #464670;
+  --color-white: #f2f2f2;
+  --color-error: #e52e2e;
+
+  --font-regular:
+    Rubik, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue,
+    Arial, sans-serif;
+  --font-medium:
+    Rubik-Medium, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, sans-serif;
+  --font-bold:
+    Rubik-Bold, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, sans-serif;
+  --font-extra-bold:
+    Rubik-ExtraBold, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, sans-serif;
+  --font-light:
+    Rubik-Light, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, sans-serif;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-grey);
+  }
+}
 
 @layer base {
 @font-face {
@@ -8,35 +53,35 @@
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url(./assets/Rubik/Rubik-Bold.ttf) format("truetype");
+    src: url(/Rubik/Rubik-Medium.ttf) format("truetype");
 }
 @font-face {
     font-family: "Rubik-ExtraBold";
     font-style: normal;
     font-weight: 800;
     font-display: swap;
-    src: url(./assets/Rubik/Rubik-ExtraBold.ttf) format("truetype");
+    src: url(/Rubik/Rubik-Medium.ttf) format("truetype");
 }
 @font-face {
     font-family: "Rubik-Light";
     font-style: normal;
     font-weight: 300;
     font-display: swap;
-    src: url(./assets/Rubik/Rubik-Light.ttf) format("truetype");
+    src: url(/Rubik/Rubik-Medium.ttf) format("truetype");
 }
 @font-face {
     font-family: "Rubik";
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url(./assets/Rubik/Rubik-Regular.ttf) format("truetype");
+    src: url(/Rubik/Rubik-Medium.ttf) format("truetype");
 }
 @font-face {
     font-family: "Rubik-Medium";
     font-style: normal;
     font-weight: 500;
     font-display: swap;
-    src: url(./assets/Rubik/Rubik-Medium.ttf) format("truetype");
+    src: url(/Rubik/Rubik-Medium.ttf) format("truetype");
 }
 }
 
