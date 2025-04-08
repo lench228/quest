@@ -1,39 +1,68 @@
 {
-  "dependencies": {
-    "@prisma/client": "^6.1.0",
-    "concurrently": "^9.1.2"
-  },
-  "name": "quest",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "client",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "concurrently \"npm run client\" \"npm run server\"",
-    "client": "npm --prefix client run dev",
-    "server": "npm --prefix server run start:dev"
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "storybook": "concurrently 'npm:watch:*'",
+    "watch:storybook": "storybook dev -p 6006",
+    "watch:tailwind": "npx tailwindcss -i ./src/index.css -o ./src/styles/output.css",
+    "build-storybook": "storybook build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lench228/quest.git#master"
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.5.0",
+    "@types/react-redux": "^7.1.34",
+    "@types/uuid": "^10.0.0",
+    "classnames": "^2.5.1",
+    "clsx": "^2.1.1",
+    "concurrently": "^9.1.2",
+    "lazy": "^1.0.11",
+    "lint": "^0.8.19",
+    "postcss-modules": "^6.0.1",
+    "react": "^18.3.1",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
+    "react-dom": "^18.3.1",
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^7.1.1",
+    "string-hash": "^1.1.3",
+    "uuid": "^11.0.5"
   },
-  "keywords": [
-    "quest",
-    "game",
-    "fun",
-    "gifts"
-  ],
-  "author": "lench",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/lench228/quest/issues"
-  },
-  "homepage": "https://github.com/lench228/quest/tree/master#readme",
-  "description": "",
   "devDependencies": {
-    "@types/multer": "^1.4.12",
-    "@types/node": "^22.10.5",
-    "prisma": "^6.1.0",
-    "tsx": "^4.19.2",
-    "typescript": "^5.7.2"
+    "@chromatic-com/storybook": "^3.2.3",
+    "@eslint/js": "^9.17.0",
+    "@storybook/addon-essentials": "^8.6.0-alpha.0",
+    "@storybook/addon-interactions": "^8.6.0-alpha.0",
+    "@storybook/addon-links": "^8.6.0-alpha.0",
+    "@storybook/addon-onboarding": "^8.6.0-alpha.0",
+    "@storybook/blocks": "^8.6.0-alpha.0",
+    "@storybook/react": "^8.6.0-alpha.0",
+    "@storybook/react-vite": "^8.6.0-alpha.0",
+    "@storybook/test": "^8.6.0-alpha.0",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@types/string-hash": "^1.1.3",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.17.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.16",
+    "eslint-plugin-storybook": "^0.11.2",
+    "globals": "^15.14.0",
+    "postcss": "^8.5.1",
+    "storybook": "^8.6.0-alpha.0",
+    "tailwindcss": "^3.4.17",
+    "typescript": "~5.6.2",
+    "typescript-eslint": "^8.18.2",
+    "vite": "^6.0.5"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
   }
 }
