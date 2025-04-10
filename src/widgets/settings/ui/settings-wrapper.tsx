@@ -1,8 +1,5 @@
 
 import { ReactNode, useEffect, useState } from "react";
-import { useDrag } from "react-dnd";
-import { useDispatch } from "react-redux";
-import {toggleSlider} from "../../../entities/quest-items/model/quest-items.slice";
 
 interface iSettingsWrapperProps {
   children: ReactNode;
@@ -10,38 +7,17 @@ interface iSettingsWrapperProps {
 
 export const SettingsWrapper = (props: iSettingsWrapperProps) => {
   const { children } = props;
-  const dispatch = useDispatch();
 
-  const PANEL_HEIGHT = 260;
-  const VISIBLE_PART = 30;
+
   const [isExpanded, setIsExpanded] = useState(true);
 
-  const [, drag] = useDrag(() => ({
-    type: "SettingsWrapper",
-    collect: () => {},
-    end: (_, monitor) => {
-      const offset = monitor.getClientOffset();
-      if (offset !== null) {
-        const swipeUp = window.innerHeight - PANEL_HEIGHT - offset.y > 0;
-        setIsExpanded(swipeUp);
-        dispatch(toggleSlider(swipeUp));
-      }
-    },
-  }));
 
   useEffect(() => {}, [isExpanded, setIsExpanded]);
   return (
     <div
-      className={"flex flex-col items-center transition-transform duration-300  self-center py-4 px-2 dark:bg-grey bg-additional"}
-      ref={drag}
-      style={{
-        transform: `translateY(${isExpanded ? 0 : PANEL_HEIGHT - VISIBLE_PART}px)`,
-        transition: "transform 0.3s ease",
-        position: "fixed",
-        left: 0,
-        right: 0,
-        bottom: 0,
-      }}
+      className={"flex flex-col w-1/2 items-center transition-transform duration-300  self-center py-4 px-2 dark:bg-grey bg-additional h-full"}
+
+
     >
       <svg
         width="200"

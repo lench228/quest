@@ -33,7 +33,7 @@ const InputWrapper = (props: iInputWrapper) => {
 
   return (
     <fieldset
-      className={"flex flex-col mb-[10px] relative"}
+      className={"flex flex-col mb-[10px] relative mx-auto "}
       data-error={error ? "true" : "false"}
     >
       <InputLabel label={label} error={error} />

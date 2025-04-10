@@ -1,8 +1,0 @@
-.container{
-    @apply h-screen flex flex-col justify-center items-center dark:bg-background;
-    @apply m-auto;
-}
-
-.text{
-    @apply font-extraBold text-2xl dark:text-additional text-background mt-10;
-}

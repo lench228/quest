@@ -13,7 +13,7 @@ export const BackgroundPickElement = (props: BackgroundPickElementProps) => {
     return (
         <li key={color.name} className={"h-full w-full flex"}>
             <input
-                onChange={(e) => {
+                onChange={() => {
                 }}
                 type={"radio"}
                 id={color.name}

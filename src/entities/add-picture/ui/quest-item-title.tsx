@@ -5,7 +5,7 @@ export const QuestItemTitle = () => {
     return (
         <h1
             className={
-                "font-bold text-2xl text-white text-center mb-2 dark:text-main text-center text-sm  dark:text-additional"
+                "font-bold text-2xl text-white text-center mb-2  text-center text-sm  "
             }
         >
             Загрузить

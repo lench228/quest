@@ -6,7 +6,7 @@ import React from "react";
 
 export const PrimarySettings = () => {
   return (
-    <div className={"flex-col items-center"}>
+    <div className={"flex-col items-center w-full sm:max-w-[400px] mx-auto sticky max-w-[600px]"}>
       <InputWrapper
         id={PRIMARY_SETTINGS_OPTIONS.inputs[0].id}
         label={PRIMARY_SETTINGS_OPTIONS.inputs[0].label}

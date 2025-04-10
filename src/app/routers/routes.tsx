@@ -3,14 +3,14 @@
 import iRoute from "./types";
 
 import { createElement, lazy, Suspense } from "react";
-import { URLS } from "../const.ts";
-import Preloader from "../../shared/ui/loading/ui/preloader.tsx";
-import Constructor from "../../pages/constructor";
 
-// import React from "react";
+import Constructor from "../../pages/constructor";
+import {URLS} from "app/const";
+import Preloader from "shared/ui/loading/preloader";
+
 
 const HomePage = lazy(() => import("../../pages/home"));
-//
+
 
 export const PublicRoutes: iRoute[] = [
   {

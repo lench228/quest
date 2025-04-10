@@ -6,7 +6,7 @@ import Upload from "../../../../public/icons/upload";
 
 export const QuestItemSkeleton = () => {
     return (
-            <div className="items-center self-center flex flex-col  justify-center h-full">
+            <div className="items-center self-center flex flex-col  justify-center min-h-[500px]">
                 <QuestItemTitle/>
                 <Upload/>
             </div>

@@ -7,7 +7,7 @@ import {BackgroundPickElements} from "./background-pick-elements";
 const BackgroundPick = () => {
   document.querySelector("main");
   return (
-    <div className={"max-w-[400px]"}>
+    <div className={""}>
       <InputLabel label={BACKGROUND_PICK.LABEL} error={""} />
         <BackgroundPickElements/>
     </div>
